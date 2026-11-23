@@ -1,0 +1,69 @@
+[
+  {
+    "name": "Navigate between the portfolio routes",
+    "sanity": true,
+    "viewport": "desktop",
+    "covers": [
+      "About, Reviews, Portfolio and Contact navigation",
+      "dedicated full-reviews route",
+      "browser back and forward"
+    ],
+    "description": "Checks that each navigation item opens the correct content and the review page has its dedicated URL.",
+    "steps": [
+      "Open About",
+      "Select Reviews in the main navigation",
+      "Confirm the URL ends in /full-reviews",
+      "Select Portfolio then Contact"
+    ],
+    "expected": "The Reviews page opens at /full-reviews, Portfolio shows the growth frameworks, and Contact shows the enquiry form."
+  },
+  {
+    "name": "Submit a complete store growth enquiry",
+    "viewport": "desktop",
+    "covers": [
+      "contact form required fields",
+      "store URL and growth goal fields",
+      "mailto enquiry handoff"
+    ],
+    "description": "Checks that a valid enquiry is prepared for the user's email application with store context.",
+    "steps": [
+      "Open Contact",
+      "Enter a name and valid email",
+      "Enter a store URL and project context",
+      "Submit the enquiry"
+    ],
+    "expected": "The browser opens an email draft addressed to hello@mubashelite.com containing the submitted store and goal details."
+  },
+  {
+    "name": "Review page protects testimonial authenticity",
+    "viewport": "mobile",
+    "covers": [
+      "dedicated Reviews page",
+      "no fabricated reviews or ratings",
+      "mobile navigation"
+    ],
+    "description": "Checks the review route and ensures only verified feedback is represented.",
+    "steps": [
+      "Open the mobile navigation",
+      "Select Reviews",
+      "Read the verified feedback notice"
+    ],
+    "expected": "The /full-reviews page explains that only genuine, approved feedback will be published and shows no invented ratings."
+  },
+  {
+    "name": "Explore growth workstreams",
+    "viewport": "desktop",
+    "covers": [
+      "Portfolio growth framework cards",
+      "workstream detail bullets",
+      "contact call to action"
+    ],
+    "description": "Checks that the portfolio page presents the three growth workstreams and links visitors to an enquiry.",
+    "steps": [
+      "Open Portfolio",
+      "Review the three growth framework cards",
+      "Select Discuss this workstream"
+    ],
+    "expected": "Store conversion, organic discovery and lifecycle retention workstreams are visible, and the Contact page opens."
+  }
+]
